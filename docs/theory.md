@@ -1,4 +1,4 @@
-# Quantum Variational Dynamics Engine — Theory
+Quantum Variational Dynamics Engine — Theory
 
 This project models a variational quantum-inspired dynamical system.
 
@@ -27,3 +27,54 @@ This connects ideas from:
 • Physics-informed learning  
 
 The goal is to visualize how optimization behaves as a dynamical system.
+
+Mathematical Formulation of QVDE
+
+We define the system state as:
+
+Ψ ∈ ℝⁿ
+
+with dynamics governed by a variational principle:
+
+dΨ/dt = −∇E(Ψ) + Σ(Ψ,t)
+
+where:
+
+E(Ψ) = variational energy functional
+Σ = stochastic operator modeling quantum noise
+
+Energy Functional
+
+We define:
+
+E(Ψ) = ½ Ψᵀ H Ψ + λ‖Ψ‖²
+
+where:
+
+H = system Hamiltonian approximation  
+λ = regularization term  
+
+
+Discrete Update Rule
+
+Ψₜ₊₁ = Ψₜ − η HΨₜ + ξₜ
+
+This is analogous to:
+
+• gradient descent
+• imaginary-time Schrödinger evolution
+• dissipative quantum systems
+
+Information Geometry View
+
+State updates follow a natural gradient on manifold M:
+
+Ψₜ₊₁ = Ψₜ − η G⁻¹ ∇E(Ψₜ)
+
+where G is the Fisher information matrix.
+
+This shows the engine is a hybrid between:
+
+• quantum variational simulation
+• Riemannian optimization
+• stochastic dynamical systems
