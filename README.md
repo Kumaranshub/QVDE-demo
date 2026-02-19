@@ -1,29 +1,43 @@
-# Quantum Variational Dynamics Engine (QVDE) – Demo
+# Quantum Variational Dynamics Engine for Scientific Dataflow Intelligence
 
-This repository contains a simple demonstration of the Quantum Variational Dynamics Engine concept.
+A computational physics–inspired framework for modeling high-dimensional optimization
+trajectories using hybrid quantum–classical dynamics.
 
-## Idea
-The project explores learning as an energy-driven dynamic process instead of static parameter optimization.
+This project demonstrates how variational quantum principles,
+information geometry, and dynamical systems theory can be used to:
 
-## Demo
-The script simulates a system whose energy decreases over time, representing convergence toward stability.
+• simulate learning trajectories in Hilbert space  
+• model optimization as a physical energy minimization process  
+• visualize dataflow as a quantum state evolution problem  
 
-## How to Run
+---
 
-Create a virtual environment:
+## Core Idea
 
-    python -m venv venv
-    source venv/bin/activate
+Instead of treating learning as purely numerical optimization,
+QVDE treats it as a **physical dynamical system** evolving on an energy landscape.
 
-Install dependencies:
+We simulate:
 
-    pip install numpy matplotlib
+Ψ(t+Δt) = Ψ(t) − η ∇E(Ψ) + ξ(t)
 
-Run the demo:
+where:
 
-    python demo.py
+Ψ = system state vector  
+E(Ψ) = variational energy functional  
+η = learning rate (dissipation term)  
+ξ(t) = stochastic perturbation (quantum noise)
 
-The script generates `output.png`, which shows energy decreasing over time.
+---
 
-## Purpose
-This demo illustrates the core idea behind the QVDE framework in a simple and visual way.
+## Outputs
+
+• 3D trajectory evolution in state space  
+• energy landscape heatmaps  
+• cinematic research visualizations  
+• exportable figures for papers  
+
+---
+
+## Structure
+
